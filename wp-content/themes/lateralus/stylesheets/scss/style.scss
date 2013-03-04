@@ -1,0 +1,37 @@
+/*
+Theme Name:     Lateralus
+Theme URI:      http://www.byronfay.com/themes
+Description:    Child theme for the Vicarious theme 
+Author:         Byron Fay
+Author URI:     http://www.byronfay.com
+Template:       vicarious
+Version:        0.1.0
+*/
+@import "../../../vicarious/stylesheets/scss/variables";
+@import "variables";
+
+@import "../../../vicarious/stylesheets/scss/reset";
+@import "../../../vicarious/stylesheets/scss/grid";
+@import "../../../vicarious/stylesheets/scss/global";
+@import "../../../vicarious/stylesheets/scss/forms";
+@import "../../../vicarious/stylesheets/scss/transitions";
+@import "../../../vicarious/stylesheets/scss/single";
+@import "../../../vicarious/stylesheets/scss/page";
+@import "../../../vicarious/stylesheets/scss/archive";
+@import "../../../vicarious/stylesheets/scss/fourohfour";
+@import "../../../vicarious/stylesheets/scss/sidebar";
+@import "../../../vicarious/stylesheets/scss/comments";
+@import "../../../vicarious/stylesheets/scss/footer";
+
+@import "global";
+@import "transitions";
+@import "header";
+@import "index";
+@import "single";
+@import "sidebar";
+@import "footer";
+@import "pages";
+@import "colorbox";
+
+@import "../../../vicarious/stylesheets/scss/mobile";
+@import "../../../vicarious/stylesheets/scss/print";

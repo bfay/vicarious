@@ -1,0 +1,383 @@
+
+
+/* Standard Forms */
+form {
+  margin: 0 0 1em; }
+
+/* Using forms within rows, we need to set some defaults */
+form .row .row {
+  margin: -0.5em; }
+  form .row .row .column,
+  form .row .row .columns {
+    padding: 0 0.5em; }
+  form .row .row.collapse {
+    margin: 0; }
+    form .row .row.collapse .column,
+    form .row .row.collapse .columns {
+      padding: 0; }
+form .row input.column,
+form .row input.columns {
+  padding-left: 0.5em; }
+
+form .row .row {
+  margin: 0; }
+
+/* Label Styles */
+label {
+  font-size: 0.875em;
+  color: #4d4d4d;
+  cursor: pointer;
+  display: block;
+  font-weight: 500;
+  margin-bottom: 0.1875em; }
+  label.right {
+    float: none;
+    text-align: right; }
+  label.inline {
+    margin: 0 0 1em 0;
+    padding: 0.625em 0; }
+
+/* Attach elements to the beginning or end of an input */
+.prefix,
+.postfix {
+  display: block;
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  width: 100%;
+  padding-top: 0;
+  padding-bottom: 0;
+  border-style: solid;
+  border-width: 1px;
+  overflow: hidden;
+  font-size: 0.875em;
+  height: 2.3125em;
+  line-height: 2.3125em; }
+
+/* Adjust padding, alignment and radius if pre/post element is a button */
+.postfix.button {
+  padding-left: 0;
+  padding-right: 0;
+  text-align: center;
+  line-height: 2.125em; }
+
+.prefix.button {
+  padding-left: 0;
+  padding-right: 0;
+  text-align: center;
+  line-height: 2.125em; }
+
+.prefix.button.radius {
+  -webkit-border-radius: 3px 0 0 3px;
+  border-radius: 3px 0 0 3px; }
+
+.postfix.button.radius {
+  -webkit-border-radius: 0 3px 3px 0;
+  border-radius: 0 3px 3px 0; }
+
+/* Separate prefix and postfix styles when on span so buttons keep their own */
+span.prefix {
+  background: #f2f2f2;
+  border-color: #d9d9d9;
+  border-right: none;
+  color: #333333; }
+  span.prefix.radius {
+    -webkit-border-radius: 3px 0 0 3px;
+    border-radius: 3px 0 0 3px; }
+
+span.postfix {
+  background: #f2f2f2;
+  border-color: #cccccc;
+  border-left: none;
+  color: #333333; }
+  span.postfix.radius {
+    -webkit-border-radius: 0 3px 3px 0;
+    border-radius: 0 3px 3px 0; }
+
+/* We use this to get basic styling on all basic form elements */
+input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="week"],
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+input[type="time"],
+input[type="url"],
+textarea {
+  background-color: white;
+  font-family: inherit;
+  border: 1px solid #cccccc;
+  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  color: rgba(0, 0, 0, 0.75);
+  display: block;
+  font-size: 0.875em;
+  margin: 0 0 1em 0;
+  padding: 0.5em;
+  height: 2.3125em;
+  width: 100%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.15s linear;
+  -moz-transition: all 0.15s linear;
+  transition: all 0.15s linear; }
+  input[type="text"]:focus,
+  input[type="password"]:focus,
+  input[type="date"]:focus,
+  input[type="datetime"]:focus,
+  input[type="datetime-local"]:focus,
+  input[type="month"]:focus,
+  input[type="week"]:focus,
+  input[type="email"]:focus,
+  input[type="number"]:focus,
+  input[type="search"]:focus,
+  input[type="tel"]:focus,
+  input[type="time"]:focus,
+  input[type="url"]:focus,
+  textarea:focus {
+    background: #fafafa;
+    border-color: #999999;
+    outline: none; }
+  input[type="text"][disabled],
+  input[type="password"][disabled],
+  input[type="date"][disabled],
+  input[type="datetime"][disabled],
+  input[type="datetime-local"][disabled],
+  input[type="month"][disabled],
+  input[type="week"][disabled],
+  input[type="email"][disabled],
+  input[type="number"][disabled],
+  input[type="search"][disabled],
+  input[type="tel"][disabled],
+  input[type="time"][disabled],
+  input[type="url"][disabled],
+  textarea[disabled] {
+    background-color: #dddddd; }
+
+/* We add basic fieldset styling */
+fieldset {
+  border: solid 1px #dddddd;
+  padding: 1.25em;
+  margin: 1.125em 0; }
+  fieldset legend {
+    font-weight: bold;
+    background: white;
+    padding: 0 0.1875em;
+    margin: 0;
+    margin-left: -0.1875em; }
+
+/* Error Handling */
+.error input,
+input.error,
+.error textarea,
+textarea.error {
+  border-color: #c60f13;
+  background-color: rgba(198, 15, 19, 0.1); }
+  .error input:focus,
+  input.error:focus,
+  .error textarea:focus,
+  textarea.error:focus {
+    background: #fafafa;
+    border-color: #999999; }
+
+.error label,
+label.error {
+  color: #c60f13; }
+
+.error small,
+small.error {
+  display: block;
+  padding: 0.375em 0.25em;
+  margin-top: -1.3125em;
+  margin-bottom: 1em;
+  font-size: 0.75em;
+  font-weight: bold;
+  background: #c60f13;
+  color: white; }
+
+/* Custom Checkbox and Radio Inputs */
+form.custom .custom {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  position: relative;
+  top: 2px;
+  border: solid 1px #cccccc;
+  background: white; }
+  form.custom .custom.radio {
+    -webkit-border-radius: 1000px;
+    border-radius: 1000px; }
+  form.custom .custom.checkbox {
+    z-index: -1; }
+    form.custom .custom.checkbox:before {
+      content: "";
+      display: block;
+      line-height: 0.8;
+      height: 14px;
+      width: 14px;
+      text-align: center;
+      position: absolute;
+      top: 0;
+      left: 0;
+      font-size: 14px;
+      color: #fff; }
+  form.custom .custom.radio.checked:before {
+    content: "";
+    display: block;
+    width: 8px;
+    height: 8px;
+    -webkit-border-radius: 1000px;
+    border-radius: 1000px;
+    background: #222222;
+    position: relative;
+    top: 3px;
+    left: 3px; }
+  form.custom .custom.checkbox.checked:before {
+    content: "\00d7";
+    color: #222222; }
+
+/* Custom Select Options and Dropdowns */
+form.custom {
+  /* Custom input, disabled */ }
+  form.custom .custom.dropdown {
+    display: block;
+    position: relative;
+    top: 0;
+    height: 2.3125em;
+    margin-bottom: 1.25em;
+    margin-top: 0px;
+    padding: 0px;
+    width: 100%;
+    background: white;
+    background: -moz-linear-gradient(top, white 0%, #f3f3f3 100%);
+    background: -webkit-linear-gradient(top, white 0%, #f3f3f3 100%);
+    background: linear-gradient(to bottom, white 0%, #f3f3f3 100%);
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    font-size: 0.875em;
+    vertical-align: top; }
+    form.custom .custom.dropdown ul {
+      overflow-y: auto;
+      max-height: 200px; }
+    form.custom .custom.dropdown .current {
+      cursor: default;
+      white-space: nowrap;
+      line-height: 2.25em;
+      color: rgba(0, 0, 0, 0.75);
+      text-decoration: none;
+      overflow: hidden;
+      display: block;
+      margin-left: 0.5em;
+      margin-right: 2.3125em; }
+    form.custom .custom.dropdown .selector {
+      cursor: default;
+      position: absolute;
+      width: 2.5em;
+      height: 2.3125em;
+      display: block;
+      right: 0;
+      top: 0; }
+      form.custom .custom.dropdown .selector:after {
+        content: "";
+        display: block;
+        content: "";
+        display: block;
+        width: 0;
+        height: 0;
+        border: solid 5px;
+        border-color: #aaaaaa transparent transparent transparent;
+        position: absolute;
+        left: 0.9375em;
+        top: 50%;
+        margin-top: -3px; }
+    form.custom .custom.dropdown:hover a.selector:after, form.custom .custom.dropdown.open a.selector:after {
+      content: "";
+      display: block;
+      width: 0;
+      height: 0;
+      border: solid 5px;
+      border-color: #222222 transparent transparent transparent; }
+    form.custom .custom.dropdown .disabled {
+      color: #888888; }
+      form.custom .custom.dropdown .disabled:hover {
+        background: transparent;
+        color: #888888; }
+        form.custom .custom.dropdown .disabled:hover:after {
+          display: none; }
+    form.custom .custom.dropdown.open ul {
+      display: block;
+      z-index: 10;
+      min-width: 100%;
+      -moz-box-sizing: content-box;
+      -webkit-box-sizing: content-box;
+      box-sizing: content-box; }
+    form.custom .custom.dropdown.small {
+      max-width: 134px !important; }
+    form.custom .custom.dropdown.medium {
+      max-width: 254px !important; }
+    form.custom .custom.dropdown.large {
+      max-width: 434px !important; }
+    form.custom .custom.dropdown.expand {
+      width: 100% !important; }
+    form.custom .custom.dropdown.open.small ul {
+      max-width: 134px !important;
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box; }
+    form.custom .custom.dropdown.open.medium ul {
+      max-width: 254px !important;
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box; }
+    form.custom .custom.dropdown.open.large ul {
+      max-width: 634px !important;
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box; }
+  form.custom .custom.dropdown ul {
+    position: absolute;
+    width: auto;
+    display: none;
+    margin: 0;
+    left: -1px;
+    top: none;
+    -webkit-box-shadow: 0 2px 2px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 2px 0px rgba(0, 0, 0, 0.1);
+    margin: 0;
+    padding: 0;
+    background: white;
+    border: solid 1px #cccccc;
+    font-size: 16px; }
+    form.custom .custom.dropdown ul li {
+      color: #555555;
+      font-size: 0.875em;
+      cursor: default;
+      padding-top: 0.25em;
+      padding-bottom: 0.25em;
+      padding-left: 0.375em;
+      padding-right: 2.375em;
+      min-height: 1.5em;
+      line-height: 1.5em;
+      margin: 0;
+      white-space: nowrap;
+      list-style: none; }
+      form.custom .custom.dropdown ul li.selected {
+        background: #eeeeee;
+        color: black; }
+      form.custom .custom.dropdown ul li:hover {
+        background-color: #e4e4e4;
+        color: black; }
+      form.custom .custom.dropdown ul li.selected:hover {
+        background: #eeeeee;
+        cursor: default;
+        color: black; }
+    form.custom .custom.dropdown ul.show {
+      display: block; }
+  form.custom .custom.disabled {
+    background-color: #dddddd; }

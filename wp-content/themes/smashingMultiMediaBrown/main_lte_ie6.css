@@ -1,0 +1,9 @@
+#pg_wrap {height:100%;}
+/*this is for the large footer. IE7 and IE8 have a problem with extra space but IE6 is fine so put the margin back on.*/
+#footer .footer_box {margin-bottom:18px;}
+/*the search form needs some more room*/
+#header #searchform {width:290px;}
+/*sidebar tabs have extra space below*/
+.sidebarTabs {height:1%;}
+/*this is for clearling the float*/
+.catRssFeed li {display:inline-block;}

@@ -1,0 +1,12 @@
+/*footer issues- ie adds unwanted space below the footer*/
+#footer .footer_notes {display:inline;}
+/*this is for the large footer. There's some extra space at the bottom so remove the margin*/
+#footer .footer_box {margin-bottom:0;}
+/*contact page with cformsII plugin installed form label has extra margin left*/
+.cform label {margin-left:-18px;}
+/*share tabs in featured area are a bit off*/
+.mediaPanesWrap .shareTabs li {list-style-position:outside;}
+/*for the social tabs on single post view: IE does not support display:table; use floats instead*/
+#socialtabs li {float:left;width:50%;}
+/*the wordpress gallery has a width issue-weird!*/
+.gallery {width:628px;}
