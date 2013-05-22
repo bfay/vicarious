@@ -21,8 +21,26 @@
  		<?php bloginfo('name'); ?>
 	</title>
 	
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic,700italic|Bitter:400,700|Karla:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+	
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 	
+	<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-37218996-1']);
+  _gaq.push(['_setDomainName', 'rockinguitarlessons.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
 	<?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>
 	<?php wp_head(); ?>	
 </head>
@@ -30,64 +48,28 @@
 	<!--[if lt IE 9]>
 		<div class="chromeframe">Your browser is out of date. Please <a href="http://browsehappy.com/">upgrade your browser </a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a>.</div>
 	<![endif]-->
-<div class="container">
-	<header id="page-header" class="row" role="banner">
-		<hgroup id="site-title-description">
-			<h1 id="site-title"><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></h1>
-			<h2 id="site-description"><?php bloginfo('description'); ?></h2>
-		</hgroup>
-
-
-		<?php
-			$header_image = get_header_image();
-			if ( $header_image ) :
-				if ( function_exists( 'get_custom_header' ) ) {
-					$header_image_width = get_theme_support( 'custom-header', 'width' );
-				} else {
-					$header_image_width = HEADER_IMAGE_WIDTH;
-				}
-				?>
-		<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
-			<?php
-				if ( is_singular() && has_post_thumbnail( $post->ID ) &&
-						( $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), array( $header_image_width, $header_image_width ) ) ) &&
-						$image[1] >= $header_image_width ) :
-					echo get_the_post_thumbnail( $post->ID, 'post-thumbnail' );
-				else :
-					if ( function_exists( 'get_custom_header' ) ) {
-						$header_image_width  = get_custom_header()->width;
-						$header_image_height = get_custom_header()->height;
-					} else {
-						$header_image_width  = HEADER_IMAGE_WIDTH;
-						$header_image_height = HEADER_IMAGE_HEIGHT;
-					}
-					?>
-				<img src="<?php header_image(); ?>" width="<?php echo $header_image_width; ?>" height="<?php echo $header_image_height; ?>" alt="" />
-			<?php endif; ?>
-		</a>
-		<?php endif; ?>
-
-		<?php
-				if ( 'blank' == get_header_textcolor() ) :
-			?>
-				<div class="only-search<?php if ( $header_image ) : ?> with-image<?php endif; ?>">
-				<?php get_search_form(); ?>
-				</div>
-			<?php
-				else :
-			?>
-				<?php get_search_form(); ?>
-			<?php endif; ?>
-
-		<nav id="site-nav" role="navigation">
+<div class="my_container">
+<div class="content_bg twelve columns">
+	<div class="red-topper">	
+		<nav class="site-nav eight columns" role="navigation">
 			<?php if ( !dynamic_sidebar("Navigation") ) : ?>
 				<?php wp_nav_menu( array('theme_location' => 'vicarious_primary_navigation', 'container' => false ) ); ?>	
 			<?php endif; ?> 
 		</nav>
-		<?php if ( is_active_sidebar("widget-subheader") ) : ?>
+	<header id="page-header" class="row" role="banner">
+	<div class="twelve columns header-bg">
+		
+		<hgroup id="site-title-description">
+			<img class="logo seven columns offset-five" src="http://images.rockinguitarlessons.com/logo.png" alt="Rockin Guitar Lessons Logo"/>
+		</hgroup>
+		
+		</div>
+
+
+		<?php /*if ( is_active_sidebar("widget-subheader") ) : ?>
 		<div id='sub_header' class='row'>
 			<?php if ( !dynamic_sidebar("Sub Header") ) : ?>
 			<?php endif; ?>
 		</div>
-		<?php endif; ?>
+		<?php endif; */?>
 	</header>
